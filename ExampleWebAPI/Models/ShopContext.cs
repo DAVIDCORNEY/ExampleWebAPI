@@ -15,7 +15,7 @@ namespace ExampleWebAPI.Models
 
             modelBuilder.Seed();
         }
-        public DbSet<Product> Products { get; set; }
+        public DbSet<Product> Products { get; set; } //advises entity framework this is a table in the database and write queries against the Product table
         public DbSet<Category> Categories  { get; set; }
     }
 
