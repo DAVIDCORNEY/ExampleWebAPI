@@ -5,7 +5,15 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+//override built in http errors and instead use custom errors
+/*builder.Services.AddControllers()
+    .ConfigureApiBehaviorOptions(options =>
+    {
+        options.SuppressModelStateInvalidFilter = true;
+    });*/
+
 builder.Services.AddControllers();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
